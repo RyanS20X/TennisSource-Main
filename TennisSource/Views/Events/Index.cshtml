@@ -1,0 +1,20 @@
+﻿@model List<TennisSource.Models.Event>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+
+*@
+@{
+}
+
+<h1>Events</h1>
+
+@foreach (var Event in Model)
+{
+    <div class="Event">
+        <h2>@Event.Title</h2>
+        <h3>@Event.Location</h3>
+        <p>@Event.Description</p>
+    </div>    
+}
