@@ -14,7 +14,7 @@ namespace TennisSource.Controllers
 
         public IActionResult Index()
         {
-            List<Event>? events = new List<Event> { new Event { EventId = 1, Title = "Nationals 2025", Description = "testing desc 1" }, new Event { EventId = 2, Title = "Nationals 2026", Description = "testing desc 2" }, new Event { EventId = 3, Title = "Nationals 2027", Description = "testing desc 3" } };
+            List<TennisTournament>? events = new List<TennisTournament> { new TennisTournament { TennisTournamentId = 1, Title = "Nationals 2025", Description = "testing desc 1" }, new TennisTournament { TennisTournamentId = 2, Title = "Nationals 2026", Description = "testing desc 2" }, new TennisTournament { TennisTournamentId = 3, Title = "Nationals 2027", Description = "testing desc 3" } };
             _logger.Log(LogLevel.Information, "Num of Events: " + events.Count);
                
             return View();
@@ -30,7 +30,7 @@ namespace TennisSource.Controllers
         }
         public IActionResult Details(int id)
         {
-            Event ev1 = new Event { EventId = id };
+            TennisTournament ev1 = new TennisTournament { TennisTournamentId = id };
             return View(ev1);
         }
 

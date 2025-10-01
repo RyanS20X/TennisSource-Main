@@ -6,6 +6,6 @@
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         
-        public List<Event>? EventsParticipatedIn { get; set; }
+        public List<TennisTournament>? EventsParticipatedIn { get; set; }
     }
 }
