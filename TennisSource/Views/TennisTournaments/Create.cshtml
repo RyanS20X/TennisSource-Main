@@ -4,41 +4,46 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1 class ="text-white">Create an Event</h1>
 
-<h4>TennisTournament</h4>
-<hr />
-<div class="row">
+
+<div class="row text-white" data-bs-theme="dark">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
+                <input asp-for="Title" class="form-control bg-darkgreen" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <input asp-for="Description" class="form-control bg-darkgreen" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Location" class="control-label"></label>
-                <input asp-for="Location" class="form-control" />
+                <input asp-for="Location" class="form-control bg-darkgreen" />
                 <span asp-validation-for="Location" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Organizer" class="control-label"></label>
+                <input asp-for="Organizer" class="form-control bg-darkgreen" />
+                <span asp-validation-for="Organizer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Date" class="control-label"></label>
-                <input asp-for="Date" class="form-control" />
+                <input asp-for="Date" class="form-control bg-darkgreen" />
                 <span asp-validation-for="Date" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TennisPlayerId" class="control-label"></label>
-                <input asp-for="TennisPlayerId" class="form-control" />
-                <span asp-validation-for="TennisPlayerId" class="text-danger"></span>
+                <label asp-for="TypeId" class="control-label"></label>
+                <input asp-for="TypeId" class="form-control bg-darkgreen form-text-white" />
+                <span asp-validation-for="TypeId" class="text-danger"></span>
             </div>
+            <br>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="CREATE EVENT" class="btn btn-primary fw-bold" />
             </div>
         </form>
     </div>

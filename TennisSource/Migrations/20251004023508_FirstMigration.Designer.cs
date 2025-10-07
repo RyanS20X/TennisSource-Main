@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TennisSource.Data;
 
@@ -10,9 +11,11 @@ using TennisSource.Data;
 namespace TennisSource.Migrations
 {
     [DbContext(typeof(TennisSourceContext))]
-    partial class TennisSourceContextModelSnapshot : ModelSnapshot
+    [Migration("20251004023508_FirstMigration")]
+    partial class FirstMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");

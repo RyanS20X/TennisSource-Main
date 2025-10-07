@@ -29,14 +29,19 @@
                 <span asp-validation-for="Location" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Organizer" class="control-label"></label>
+                <input asp-for="Organizer" class="form-control" />
+                <span asp-validation-for="Organizer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Date" class="control-label"></label>
                 <input asp-for="Date" class="form-control" />
                 <span asp-validation-for="Date" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TennisPlayerId" class="control-label"></label>
-                <input asp-for="TennisPlayerId" class="form-control" />
-                <span asp-validation-for="TennisPlayerId" class="text-danger"></span>
+                <label asp-for="TypeId" class="control-label"></label>
+                <input asp-for="TypeId" class="form-control" />
+                <span asp-validation-for="TypeId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

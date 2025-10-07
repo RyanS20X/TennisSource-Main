@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using TennisSource.Data;
 
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<TennisSourceContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("TennisSourceContext") ?? throw new InvalidOperationException("Connection string 'TennisSourceContext' not found.")));
@@ -28,7 +29,7 @@ app.MapStaticAssets();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
+    pattern: "{controller=TennisTournaments}/{action=Index}/{id?}")
     .WithStaticAssets();
 
 

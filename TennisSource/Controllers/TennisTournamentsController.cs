@@ -54,7 +54,7 @@ namespace TennisSource.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TennisTournamentId,Title,Description,Location,Date,TennisPlayerId")] TennisTournament tennisTournament)
+        public async Task<IActionResult> Create([Bind("TennisTournamentId,Title,Description,Location,Organizer,Date,TypeId")] TennisTournament tennisTournament)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace TennisSource.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("TennisTournamentId,Title,Description,Location,Date,TennisPlayerId")] TennisTournament tennisTournament)
+        public async Task<IActionResult> Edit(int id, [Bind("TennisTournamentId,Title,Description,Location,Organizer,Date,TypeId")] TennisTournament tennisTournament)
         {
             if (id != tennisTournament.TennisTournamentId)
             {

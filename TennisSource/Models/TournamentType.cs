@@ -1,11 +1,12 @@
 ﻿namespace TennisSource.Models
 {
-    public class TennisPlayer
+    public class TournamentType
     {
-        public int Id { get; set; }
+        public int TournamentTypeId { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
-        
-        public List<TennisTournament>? EventsParticipatedIn { get; set; }
+
+
+        public List<TennisTournament>? Tournaments { get; set; }
     }
 }
