@@ -4,51 +4,47 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1 class="border-bottom border-white text-white pb-2 border-3">Details</h1>
 
 <div>
-    <h4>TennisTournament</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Location)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Organizer)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Organizer)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Date)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TypeId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TypeId)
-        </dd>
-    </dl>
+    <div class="card mt-2 px-0 py-4 cardgradient border-5 rounded-5 border-white text-white" style="width: 100%; max-height: 500px">
+                <h1 class="ms-4 ps-2 fw-bolder text-uppercase">@Html.DisplayFor(model => model.Title)</h1>
+                <ul class="nav justify-content-evenly">
+                    <li class="nav-item">Item
+                        <p>Type: @Html.DisplayFor(model => model.TypeId)</p>
+                        <p class="fw-bold">Location: @Html.DisplayFor(model => model.Location)</p>
+                        <h3>@Html.DisplayFor(model => model.Date)</h3>
+                        <ul class="nav pt-1">
+                            <li class="nav-item p-1">
+                        <a asp-action="Edit" asp-route-id="@Model?.TennisTournamentId" class="link-light">Edit</a>
+                            </li>
+                            <li class="nav-item p-1"><p>|</p></li>
+                            <li class="nav-item p-1">
+                        <a asp-action="Delete" asp-route-id="@Model?.TennisTournamentId" class="link-light">Delete</a>
+                            </li>
+                            <li class="nav-item p-1"><p>|</p></li>
+                            <li class="nav-item p-1"><a asp-action="Index" class="link-light">Back to List</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" style="max-width: 40%;">
+                        <p class="fst-italic fw-bold pb-0 mb-0" style="max-height: inherit;">@Html.DisplayFor(model => model.Description)</p>
+                        
+                    </li>
+                    
+                    <li class="nav-item text-center pb-3">
+                        <h3 class="">Tournament Organizer:</h3>
+                        <h2>@Html.DisplayFor(model => model.Organizer)</h2>
+                    </li>
+                    `
+                </ul>
+
+                
+
+                
+                 
+            
+        </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.TennisTournamentId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+

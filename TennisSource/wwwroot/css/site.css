@@ -19,7 +19,7 @@ html {
 
 body {
     margin-bottom: 60px;
-    background-image: linear-gradient(to bottom, #0a3622 70%, #062417);
+    background-image: linear-gradient(to bottom, #0266c9 70%, #00aeff);
 }
 
 .bg-darkgreen {
@@ -61,5 +61,5 @@ body {
 }
 
 .cardgradient {
-    background-image: linear-gradient(to bottom right, #198754 40%, #10b367);
+    background-image: linear-gradient(to bottom right, #26b30c 10%, #65ff36 75%, #c6fa9d);
 }
